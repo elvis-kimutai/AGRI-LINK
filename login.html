@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us Today</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="icon" href="./Images/Restaurants/download.png" type="image/icon type">
+</head>
+<body>
+    <div>
+        <header class="header">
+            <a href="#">
+                <img class="logo" alt="Omnifood logo" src="images/food-logo.png">
+            </a>
+            <nav class="main-nav">
+                <ul class="main-nav-list">
+                    <li><a class="main-nav-link" href="index.html">Home</a></li>
+                    <li><a class="main-nav-link" href="products.html">products</a></li>
+                    <li><a class="main-nav-link" href="contact.html">contact us</a></li>
+                    <li><a class="main-nav-link" href="#pricing">connect</a></li>
+                    <li><a class="main-nav-link nav-cta" href="login.html">Sign Up</a></li>
+                </ul>
+            </nav>
+
+            <button class="btn-mob-nav">
+                <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+                <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+            </button>
+        </header>
+    </div>
+
+    <div class=" body">
+
+        <div class="container">
+            <div class="loginbg">
+                <div class="box signin">
+                    <h2>Already Have an Account ?</h2>
+                    <button class="signinbtn">Sign in</button>
+                </div>
+                <div class="box signup">
+                    <h2>Dont Have an Account ?</h2>
+                    <button><a class="signupbtn" href="sign-in.html">Sign up</a></button>
+                </div>
+            </div>
+            <div class="formbx">
+                <div class="form signinform" >
+                    <form  method="POST" action="logindetails.php">
+                        <h2>Welcome Back AGRI-LINK</h2>
+                        <h3>Sign In</h3>
+                        <input type="text" placeholder="Username" name="user_name">
+                        <input type="password" placeholder="Password" name="user_password">
+                        <input type="submit" value="Login">
+                        </a>
+                        <a href="#" class="forgot">Forgot password?</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signinbtn = document.querySelector('.signinbtn');
+        const signupbtn = document.querySelector('.signupbtn');
+        const formbx = document.querySelector('.formbx'); 
+        const body = document.querySelector('body')
+
+        signupbtn.onclick = function(){
+            formbx.classList.add('active')
+            body.classList.add('active')
+        }
+        signinbtn.onclick = function(){
+            formbx.classList.remove('active')
+            body.classList.remove('active')
+        }
+    </script>
+</body>
+</html>
